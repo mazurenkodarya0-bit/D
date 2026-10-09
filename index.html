@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Игры с блоками Дьенеша</title>
+<style>
+    :root { box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+    html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #6fcf7f 0%, #2e9e57 100%);
+        padding: 20px;
+        min-height: 100vh;
+    }
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+        overflow: hidden;
+    }
+    .header {
+        background: linear-gradient(135deg, #6fcf7f 0%, #2e9e57 100%);
+        color: #0f3d1f;
+        padding: 40px 30px;
+        text-align: center;
+    }
+    .header h1 { font-size: 1.9em; margin-bottom: 10px; font-weight: 700; line-height: 1.35; }
+    .header p { font-size: 1.05em; opacity: 0.9; }
+    .content { padding: 40px 30px; }
+    .section { margin-bottom: 36px; padding-bottom: 28px; border-bottom: 2px solid #f0f0f0; }
+    .section:last-child { border-bottom: none; margin-bottom: 0; }
+    .section h2 {
+        color: #1f7a42;
+        font-size: 1.3em;
+        margin-bottom: 6px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #2e9e57;
+    }
+    a { color: #1f7a42; font-weight: 600; word-break: break-all; }
+    .sub { color: #5c7a66; font-size: .95em; font-style: italic; margin: 10px 0 4px; }
+    .section h3 { color: #1b6a3a; font-size: 1.05em; margin: 18px 0 10px; font-weight: 600; }
+    p.text { line-height: 1.85; margin-bottom: 14px; color: #333; }
+    .info-box {
+        background: #effaf1;
+        border-left: 4px solid #2e9e57;
+        padding: 20px;
+        margin: 16px 0;
+        border-radius: 8px;
+        line-height: 1.8;
+    }
+    .step {
+        background: white;
+        border: 2px solid #2e9e57;
+        border-radius: 10px;
+        padding: 16px 20px;
+        margin: 14px 0;
+    }
+    .step-title { font-weight: 600; color: #333; }
+    .step p { margin-top: 6px; color: #555; line-height: 1.7; }
+    .footer {
+        background: #effaf1;
+        padding: 30px;
+        text-align: center;
+        border-top: 2px solid #e0e0e0;
+    }
+    .signature {
+        font-size: 1.3em;
+        font-weight: 700;
+        background: linear-gradient(135deg, #4cbf6b 0%, #1f7a42 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    @media print {
+        body { background: white; }
+        .container { box-shadow: none; border-radius: 0; }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <h1>Игры с блоками Дьенеша</h1>
+    </div>
+
+    <div class="content">
+
+        <div class="section">
+            <h2>👉🏻 Печём пирожки / Глобальная выборка (от 2х лет)</h2>
+            <p class="text">Просим малыша выбрать фигуры из общей кучи. Начинаем строго с одного признака: «Собери на этот поднос только красные печенья». Когда малыш легко справляется, усложняем до двух признаков: «Давай найдем все синие треугольники».</p>
+            <div class="info-box">Далее как усложнение добавляем размер. И в последнюю очередь-толщину.</div>
+        </div>
+
+        <div class="section">
+            <h2>👉🏻 Угощение для медвежат (от 2х лет)</h2>
+            <p class="text">Берем любимые игрушки (например, мишку и зайку). Объясняем: «Мишка любит кушать только толстые печенья (толстые блоки), а зайка — только тонкие». Задача ребенка — распределить набор между игрушками.</p>
+            <div class="info-box">Позже можно также усложнять количеством признаков.</div>
+        </div>
+
+        <div class="section">
+            <h2>👉🏻 Заселение в домик по контурам (от 2х лет)</h2>
+            <p class="text">Используем распечатанные цветные шаблоны (они будут в комментариях). Малыш берет фигуру и накладывает ее точно на такой же рисунок на листе.</p>
+        </div>
+
+        <div class="section">
+            <h2>👉🏻 Что изменилось? (От 2-2,5 лет)</h2>
+            <p class="text">Выкладываем перед ребенком ряд блоков (начните ровно с 3-х штук). Малыш запоминает их.</p>
+            <p class="text">Варианты игры:</p>
+            <div class="step">
+                <span class="step-title">1️⃣</span>
+                <p>Ребёнок отворачивается, вы убираете 1 фигуру. Задача — вернуть пропажу на место.</p>
+            </div>
+            <div class="step">
+                <span class="step-title">2️⃣</span>
+                <p>Заменяете одну деталь на другую.</p>
+            </div>
+            <div class="step">
+                <span class="step-title">3️⃣</span>
+                <p>Меняете фигуры местами.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>👉🏻 Волшебные дорожки (от 2,5 лет)</h2>
+            <p class="text">Строим тропинку от одной игрушки к другой.</p>
+            <div class="step">
+                <span class="step-title">Простой вариант</span>
+                <p>каждая следующая деталь должна быть такого же цвета (красная дорожка).</p>
+            </div>
+            <div class="step">
+                <span class="step-title">Сложный вариант</span>
+                <p>каждая следующая деталь должна отличаться по цвету (красная, за ней синяя, за ней желтая).</p>
+            </div>
+            <div class="info-box">В дальнейшем можно также усложнять признаками.</div>
+        </div>
+
+        <div class="section">
+            <h2>👉🏻 Рыбалка (от 2,5 лет)</h2>
+            <p class="text">Складываем все блоки в обруч или коробку — это наш «пруд». Вы даете команду: «Поймай мне, пожалуйста, большую красную рыбку!» (ребенок ищет большой красный блок любой формы).</p>
+            <div class="info-box">Можно сделать удочку из стаканчика со скотчем. И рассортировывать: «мишке треугольники, зайке круги»</div>
+        </div>
+
+        <div class="section">
+            <h2>👉🏻 Комнаты (от 2,5 лет)</h2>
+            <p class="text">Рисуем дом с этажами и комнатами (в шаблонах есть готовые варианты). Договариваемся, кто где живет: «На первом этаже живут только красные фигуры, а на втором — только синие». Ребенок сортирует блоки по этажам.</p>
+            <div class="info-box">Для малышей до 3-х лет мы не даем сложные таблицы с пересечением условий, используем домик просто как базу для сортировки!</div>
+        </div>
+
+        <div class="section">
+            <h2>👉🏻 Кондитерская фабрика (от 2,5 лет)</h2>
+            <p class="text">Берем разные коробочки (например, квадратную коробку и круглую миску). Даем задание: «На нашей фабрике нужно упаковать конфеты. В круглую коробку мы должны сложить 3 маленькие конфеты (маленькие блоки), а в квадратную коробку — 3 большие конфеты». Учимся сортировать предметы по конкретному условию формы/размера контейнера.</p>
+            <p class="text">Вот пример игры: <a href="https://youtu.be/nO8Q3Nd7q3o">https://youtu.be/nO8Q3Nd7q3o</a></p>
+        </div>
+
+        <div class="section">
+            <h2>👉🏻 Кодирование (от 2,5 - 3 лет)</h2>
+            <p class="text">Учимся «читать» схемы! Задание даем не словами, а специальными билетиками, на которых нарисованы символы (билетики по уровням есть в шаблонах).</p>
+            <div class="step">
+                <span class="step-title">Для начала</span>
+                <p>берем 1 признак: нарисовано просто красное пятно (ребенок ищет любой красный блок).</p>
+            </div>
+            <div class="step">
+                <span class="step-title">Затем</span>
+                <p>2 признака: красное пятно + контур квадрата (ребенок ищет красный квадрат).</p>
+            </div>
+            <div class="info-box">Важно: в этом возрасте мы еще НЕ используем карточки с отрицанием (перечеркнутые знаки).</div>
+        </div>
+
+        <div class="section">
+            <h2>👉🏻 Магазин (от 2,5 - 3 лет)</h2>
+            <p class="text">На «прилавок» выкладываете игрушки, под каждой — «ценник» (билетик-карточка с нарисованным символом из шаблонов. Можете их использовать). Вы — продавец, ребёнок — покупатель. Чтобы купить яблоко, под которым нарисован, например, синий круг, ребёнку нужно «прочитать» цену, пойти в банк (коробку с блоками), найти нужную фигуру и расплатиться с вами.</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p class="signature">С любовью, мама❤️</p>
+    </div>
+
+</div>
+</body>
+</html>
